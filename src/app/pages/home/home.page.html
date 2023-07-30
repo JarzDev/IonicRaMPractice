@@ -1,0 +1,45 @@
+<ion-header mode="md">
+  <ion-toolbar>
+    <ion-title>Rick And Morty</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content >
+  <div class="glass-content">
+    
+    <ion-grid >
+      <ion-row>
+        <ion-col *ngFor=" let item of characters" size-lg="4" size-md="6"  size-sm="12" size="12"> 
+        <ion-card>
+     <ion-grid>
+
+      <ion-row>
+        <ion-col size-lg="4" size-md="4"  size-sm="4" size="12">
+<ion-avatar>
+  <img [src]="item.image">
+</ion-avatar>
+        </ion-col>
+        <ion-col size-lg="8" size-md="8"  size-sm="8" size="12">
+          <div>
+           <h3> {{item.name}} </h3>
+            <p> Origen: <br> <strong> {{item.origin.name}} </strong></p>
+          </div>
+          
+        </ion-col>
+      </ion-row>
+     </ion-grid>
+
+        </ion-card>
+
+        </ion-col>
+        
+      </ion-row>
+    </ion-grid>
+ <ion-infinite-scroll threshold="25%"  position="bottom" (ionInfinite)="getCharacters($event)">
+  <ion-infinite-scroll-content loadingSpinner="bubbles" loadingText="Loading more data...">
+  </ion-infinite-scroll-content>
+ </ion-infinite-scroll>
+
+  </div>
+
+</ion-content>

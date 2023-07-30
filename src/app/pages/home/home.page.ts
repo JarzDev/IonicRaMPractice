@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { IonicModule } from '@ionic/angular';
 import { RickandmortyService } from 'src/app/services/rickandmorty.service';
 
 
@@ -39,4 +38,18 @@ characters: any[]=[];
   });
 }
 
+searchCharacters(){
+  this.params.page= 1;
+
+  this.rickmortySvr.getCharacters(this.params).subscribe({
+    next: (res:any) => {
+      
+      this.characters = res.results
+     
+    }, error: (err:any) => {
+      console.log(err);
+      
+    }
+});
+}
 }

@@ -12,4 +12,14 @@ export class RickandmortyService {
   getCharacters(params : any){
     return this.http.get(environment.baseUrl + environment.character, {params});
   }
-}
+  getCharactersById(id: string){
+    return this.http.get(environment.baseUrl + environment.character + id);
+  }
+  getByUrl(url: string){
+    return this.http.get(url);
+  }
+
+    
+  }
+
+

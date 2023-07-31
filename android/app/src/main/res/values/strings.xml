@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">rickandmortypracticeapp</string>
+    <string name="title_activity_main">rickandmortypracticeapp</string>
+    <string name="package_name">com.agilenetworks.app</string>
+    <string name="custom_url_scheme">com.agilenetworks.app</string>
+</resources>

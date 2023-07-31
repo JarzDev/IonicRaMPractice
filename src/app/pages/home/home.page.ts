@@ -17,6 +17,7 @@ characters: any[]=[];
   ngOnInit() {
    this.params.page = 0;
     this.getCharacters();
+    console.log(this.params.page);
   }
 
   getCharacters(event?:any){

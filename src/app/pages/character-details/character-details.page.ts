@@ -37,11 +37,11 @@ this.rickandmortyService.getCharactersById(this.idPage).subscribe({
        
   }});
 }
-
-getEpisodes (){
+ 
+async getEpisodes (){
 
   for(let url of this.character.episode){
-  this.rickandmortyService.getByUrl(url).subscribe({
+  await this.rickandmortyService.getByUrl(url).subscribe({
     next: (res:any) => {
     
       this.episodes.push(res);
